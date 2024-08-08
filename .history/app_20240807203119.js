@@ -163,12 +163,7 @@ allPeople(first: 5) {
             name
             }
           }
-          starshipConnection {
-           starships{
-            name
-          }
         }
-       }
       }
     }`,
   };

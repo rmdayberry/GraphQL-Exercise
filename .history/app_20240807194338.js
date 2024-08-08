@@ -52,16 +52,15 @@ allPeople(first: 5) {
     allSpecies(first: 5) {
       species {
         name 
-        language
+          languages
         }
        }
       }`,
-
     planetsAndClimate: `{
-      allPlanets(first:5) {
+      allPlanets(first:5){
         planets{
           name
-          climates
+            climate
               }
             }
           }`,
@@ -74,17 +73,16 @@ allPeople(first: 5) {
         }
       }`,
     characterInFilm: `{
-    film(id: "ZmlsbXM6MQ=="){
+    film(id: "ZmlsbXM6MQ==")
       characterConnection {
         characters{
           name
             }
           }
-        } 
-      }`,
+        }`,
     multiFilmCharacters: `{
-      allPeople {
-        people {
+      allPeople{
+        people
           name
           filmConnection{
               films{
@@ -92,8 +90,7 @@ allPeople(first: 5) {
                 }
               }
             }
-          }  
-        }`,
+          }`,
     aggregatedFilmStatistics: `{
       allFilms{
         films{
@@ -163,12 +160,7 @@ allPeople(first: 5) {
             name
             }
           }
-          starshipConnection {
-           starships{
-            name
-          }
         }
-       }
       }
     }`,
   };
@@ -193,15 +185,4 @@ allPeople(first: 5) {
   fetchData(queries.character, "character");
   fetchData(queries.planets, "planets");
   fetchData(queries.starships, "starships");
-  fetchData(queries.characterAndStarships, "charactersStarships");
-  fetchData(queries.speciesAndLanguages, "speciesLanguages");
-  fetchData(queries.planetsAndClimate, "planetClimate");
-  fetchData(queries.vehicleAndCosts, "vehicleCosts");
-  fetchData(queries.characterInFilm, "characterInFilm");
-  fetchData(queries.multiFilmCharacters, "multiFilmCharacters");
-  fetchData(queries.aggregatedFilmStatistics, "aggregatedFilmStatistics");
-  fetchData(queries.fullCharacterProfile, "fullCharacterProfile");
-  fetchData(queries.linkCharacterWithPlanets, "linkCharacterWithPlanets");
-  fetchData(queries.vehiclesPilotsAndSpecies, "vehiclesPilotsAndSpecies");
-  fetchData(queries.filmsAndAssociatedEntities, "filmsAndAssociatedEntities");
 });

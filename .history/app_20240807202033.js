@@ -83,8 +83,8 @@ allPeople(first: 5) {
         } 
       }`,
     multiFilmCharacters: `{
-      allPeople {
-        people {
+      allPeople{
+        people
           name
           filmConnection{
               films{
@@ -92,8 +92,7 @@ allPeople(first: 5) {
                 }
               }
             }
-          }  
-        }`,
+          }`,
     aggregatedFilmStatistics: `{
       allFilms{
         films{
@@ -163,12 +162,7 @@ allPeople(first: 5) {
             name
             }
           }
-          starshipConnection {
-           starships{
-            name
-          }
         }
-       }
       }
     }`,
   };
@@ -202,6 +196,4 @@ allPeople(first: 5) {
   fetchData(queries.aggregatedFilmStatistics, "aggregatedFilmStatistics");
   fetchData(queries.fullCharacterProfile, "fullCharacterProfile");
   fetchData(queries.linkCharacterWithPlanets, "linkCharacterWithPlanets");
-  fetchData(queries.vehiclesPilotsAndSpecies, "vehiclesPilotsAndSpecies");
-  fetchData(queries.filmsAndAssociatedEntities, "filmsAndAssociatedEntities");
 });
